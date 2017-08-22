@@ -1,0 +1,6 @@
+{
+  "require": {
+    "madcoda/php-youtube-api": "^1.2",
+    "miniflux/picofeed": "@stable"
+  }
+}
