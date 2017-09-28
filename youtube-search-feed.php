@@ -40,6 +40,7 @@ foreach ($videoResult as $video) {
         ->withItem(Rss20ItemBuilder::create($feedBuilder)
             ->withId($video->id->videoId)
             ->withTitle(htmlspecialchars($video->snippet->title))
+            ->withAuthor($video->snippet->channelTitle, $url = 'https://www.youtube.com/channel/'.$video->snippet->channelId)
             ->withUrl('https://www.youtube.com/watch?v=' . urlencode($video->id->videoId))
             ->withPublishedDate($date)
             ->withSummary($video->snippet->description)
